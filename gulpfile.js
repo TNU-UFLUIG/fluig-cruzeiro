@@ -19,15 +19,15 @@ gulp.task('webserver', function () {
       livereload: true,
       directoryListing: true,
       open: true,
-      // path: 'seed-fluig',
+      // path: 'cruzeirodosul-fluig',
       proxies: [
         // { source: '/', target: params.cliServer }
         { source: '/api', target: params.cliServer + '/api' },
         { source: '/ecm', target: params.cliServer + '/ecm' },
         { source: '/portal', target: params.cliServer + '/portal' },
         { source: '/resources', target: params.cliServer + '/resources' },
-        { source: '/seed_lib', target: params.cliServer + '/seed_lib' },
-        { source: '/seed-api', target: params.cliServer + '/seed-api' },
+        { source: '/cruzeirodosul_lib', target: params.cliServer + '/cruzeirodosul_lib' },
+        { source: '/cruzeirodosul-api', target: params.cliServer + '/cruzeirodosul-api' },
         { source: '/webdesk', target: params.cliServer + '/webdesk' },
         { source: '/style-guide', target: params.cliServer + '/style-guide' }
       ]

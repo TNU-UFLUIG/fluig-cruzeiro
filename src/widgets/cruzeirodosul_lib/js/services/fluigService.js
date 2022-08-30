@@ -1,4 +1,4 @@
-angular.module('seed.services')
+angular.module('cruzeirodosul.services')
   .factory('fluigService', ['$q', '$http', '$log', '$document', 'globalService',
     ($q, $http, $log, $document, globalService) => ({
 

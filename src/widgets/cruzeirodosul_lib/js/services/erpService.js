@@ -1,4 +1,4 @@
-angular.module('seed.services')
+angular.module('cruzeirodosul.services')
   .factory('erpService', ['$http', '$log', 'fluigService',
     ($http, $log, fluigService) => ({
 
@@ -17,7 +17,7 @@ angular.module('seed.services')
         }
 
         try {
-          dataset = DatasetFactory.getDataset('seed_erp_consulta_estabelecimento', null, constraints)
+          dataset = DatasetFactory.getDataset('cruzeirodosul_erp_consulta_estabelecimento', null, constraints)
             .values;
         } catch (error) {
           $log.error(error);

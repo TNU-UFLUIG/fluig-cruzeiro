@@ -1,4 +1,4 @@
-angular.module('seed.directives')
+angular.module('cruzeirodosul.directives')
   .directive('dateRangePicker', ['$document', '$timeout', function dateRangePicker($document, $timeout) {
     return {
       restrict: 'E',
@@ -210,7 +210,7 @@ angular.module('seed.directives')
   }]);
 
 // Scroll up directive
-angular.module('seed.directives')
+angular.module('cruzeirodosul.directives')
   .directive('scrollUp', () => ({
     restrict: 'A',
     compile() {
@@ -233,7 +233,7 @@ angular.module('seed.directives')
   }));
 
 // Scroll down directive
-angular.module('seed.directives')
+angular.module('cruzeirodosul.directives')
   .directive('scrollDown', () => ({
     restrict: 'A',
     compile() {

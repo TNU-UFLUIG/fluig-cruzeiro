@@ -4,7 +4,7 @@ if (typeof module !== 'undefined' &&
   module.exports = 'elastic';
 }
 
-angular.module('seed.directives')
+angular.module('cruzeirodosul.directives')
 
   .constant('elasticConfig', {
     append: ''

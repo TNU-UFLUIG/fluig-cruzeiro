@@ -1,16 +1,10 @@
-# Seed
+# Cruzeiro do Sul
 
-Projeto Seed Fluig (start para novos projetos)
+Projeto Fluig - Universidade Cruzeiro do Sul
 
 ### Instalação
 
 Requer [Node.js](https://nodejs.org/) (recomendável 11.13.0).
-
-Substitua o nome do arquivo src/widgets/seed_lib/js/services/seedService.js por nomeDoClienteService.js
-Substitua a string "seed" em todos os locais pelo nome do cliente
-Substitua o nome da pasta seed_lib em src/widgets por nomeDoCliente_lib
-Substitua o nome da pasta seed-fluig por nomeDoCliente-fluig
-Altere a propriedade cliServer para a URL do cliente no arquivo package.json
 
 Instale as dependências e inicie:
 
@@ -19,7 +13,7 @@ $ npm install
 $ npm start
 ```
 
-As alterações serão assistidas e o código atualizado será gerado no diretório de projeto no Eclipse (seed-fluig)
+As alterações serão assistidas e o código atualizado será gerado no diretório de projeto no Eclipse (cruzeirodosul-fluig)
 
 
 Para ambiente de produção...
@@ -40,7 +34,7 @@ No Eclipse, selecione a raiz deste projeto como workspace e crie um novo projeto
 
 Formulários, datasets e widgets devem ser alterados no diretório src 
 
-Scripts do processo devem ser alterados diretamente no diretório do projeto: seed-fluig/workflow/scripts
+Scripts do processo devem ser alterados diretamente no diretório do projeto: cruzeirodosul-fluig/workflow/scripts
 
     - TODO: Trazer scripts do processo para o diretório src e montar task no gulp para atualização no diretório do projeto
 
@@ -61,7 +55,7 @@ Todas as exportações devem ser feitas pelo Eclipse
 Estrutura de pastas:
 
 * doc: Documentações (MIF, estimativas, imagens auxiliares) dos projetos. Sugestão: Criar uma pasta para cada projeto.
-* seed-fluig: Pasta do projeto no Eclipse. Deverá ser renomeado para nomeDoCliente-fluig.
+* cruzeirodosul-fluig: Pasta do projeto no Eclipse. Deverá ser renomeado para nomeDoCliente-fluig.
 * src/datasets: Datasets do projeto. Serão compilados pelo gulp e copiados para o diretório nomeDoCliente-fluig/datasets. Na pasta partials encontram-se algumas funções auxiliares que podem ser usadas nos datasets. Para utilizá-las cole no dataset no formato abaixo:
 
 /*$$ partials/executaSql.js $$*/

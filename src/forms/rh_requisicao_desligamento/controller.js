@@ -1,7 +1,7 @@
-angular.module('seedApp', ['angular.fluig', 'ngAnimate', 'seed.services'])
+angular.module('cruzeirodosulApp', ['angular.fluig', 'ngAnimate', 'cruzeirodosul.services'])
 
-  .controller('seedController', ['$scope', '$http', '$timeout', '$log', 'formService',
-    function seedController($scope, $http, $timeout, $log, formService) {
+  .controller('cruzeirodosulController', ['$scope', '$http', '$timeout', '$log', 'formService',
+    function cruzeirodosulController($scope, $http, $timeout, $log, formService) {
       const vm = this;
 
       if (window.location.hostname == 'localhost') {

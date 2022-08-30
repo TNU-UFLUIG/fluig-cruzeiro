@@ -1,4 +1,4 @@
-angular.module('seed.services')
+angular.module('cruzeirodosul.services')
   .factory('formService', ['$q', '$http', '$compile', '$timeout', '$log', 'globalService',
     ($q, $http, $compile, $timeout, $log, globalService) => ({
       /**

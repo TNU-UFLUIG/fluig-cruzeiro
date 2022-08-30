@@ -1,4 +1,4 @@
-angular.module('seed.services')
+angular.module('cruzeirodosul.services')
   .factory('globalService', () => ({
     isJson: function isJson(str) {
       try {
