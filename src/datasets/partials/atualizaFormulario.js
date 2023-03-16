@@ -1,4 +1,4 @@
-function atualizaFormulario(empresa, usuario, senha, documentid, campos) {
+function atualizaForm(empresa, usuario, senha, documentid, campos) {
 
   var cardServiceProvider = ServiceManager.getServiceInstance("ECMCardService");
   var cardServiceLocator = cardServiceProvider.instantiate("com.totvs.technology.ecm.dm.ws.ECMCardServiceService");

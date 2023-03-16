@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="alert alert-info" role="alert">
+            Aprove ou reprove a solicitação através do campo Status. Em caso de reprovação justifique através do campo
+            de Observações. Neste caso a solicitação será devolvida ao Gestor. Caso aprovada, seguirá para a próxima
+            etapa.
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label class="control-label">Responsável</label>
+            <!-- <input type="text" name="gestor" class="form-control" ng-model="vm.Form.gestor" ng-value="vm.Form.gestor"> -->
+            <p>{{vm.Form.rh}}</p>
+            <!-- <p>JOAO DA SILVA</p> -->
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <label class="control-label">Data do Parecer</label>
+            <!-- <input type="text" fluig-date-mask name="gestorDataAprovacao" class="form-control" ng-model="vm.Form.gestorDataAprovacao" ng-value="vm.Form.gestorDataAprovacao"> -->
+            <p>{{vm.Form.dataRH | date}}</p>
+            <!-- <p>01 de Setembro de 2022</p> -->
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label class="control-label">Status</label>
+            <div>
+                <p class="radio-inline">
+                    <input type="radio" name="statusRH" value="A" ng-model="vm.Form.statusRH"> Aprovado
+                </p>
+                <p class="radio-inline">
+                    <input type="radio" name="statusRH" value="R" ng-model="vm.Form.statusRH"> Reprovado
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="control-label">Observações</label>
+            <textarea name="observacoesRH" class="form-control" ng-model="vm.Form.observacoesRH"
+                ng-value="vm.Form.observacoesRH"></textarea>
+        </div>
+    </div>
+</div>

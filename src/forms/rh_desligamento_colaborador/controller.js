@@ -1,7 +1,7 @@
 angular.module('cruzeirodosulApp', ['angular.fluig', 'ngAnimate', 'cruzeirodosul.services'])
 
-  .controller('cruzeirodosulController', ['$scope', '$http', '$timeout', '$log', 'formService',
-    function cruzeirodosulController($scope, $http, $timeout, $log, formService) {
+  .controller('cruzeirodosulController', ['$scope', '$compile', '$http', '$timeout', '$log', 'formService',
+    function cruzeirodosulController($scope, $compile, $http, $timeout, $log, formService) {
       const vm = this;
 
       if (window.location.hostname == 'localhost') {
@@ -16,13 +16,12 @@ angular.module('cruzeirodosulApp', ['angular.fluig', 'ngAnimate', 'cruzeirodosul
           });
       }
 
-      formService.atualizaFormulario($scope, vm)
+      formService.atualizaForm($scope, vm)
         .then(() => {
           vm.inicia();
         });
 
       vm.inicia = function inicia() {
-        vm.checkLocal();
         vm.checkRegras();
       };
 
@@ -52,24 +51,5 @@ angular.module('cruzeirodosulApp', ['angular.fluig', 'ngAnimate', 'cruzeirodosul
           }
         });
       };
-
-      vm.checkLocal = function checkLocal() {
-        if (window.location.hostname == 'localhost') {
-          vm.Params = {
-            edit: true,
-            etapa: "inicio",
-            user: 'admin',
-            formMode: 'ADD'
-          };
-
-          vm.Formulario.solicitante = "ALEX FERREIRA";
-          vm.Formulario.gestor = "PAULA NASCIMENTO";
-          vm.Formulario.diretor = "JOSE ARANTES";
-          vm.Formulario.financeiro = "ADRIANA ASSUNCAO";
-          vm.Formulario.data = new Date();
-
-        }
-      }
-
     }
   ]);

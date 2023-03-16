@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="alert alert-info" role="alert">
+            Aprove ou reprove a solicitação através do campo Status. Em caso de reprovação justifique através do campo
+            de Observações. Neste caso a solicitação será devolvida ao Gestor. Caso aprovada, seguirá para a próxima
+            etapa.
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label class="control-label">Responsável</label>
+            <p>{{vm.Form.nomeMedSeg}}</p>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <label class="control-label">Data do Parecer</label>
+            <p>{{vm.Form.dataMedSeg | date}}</p>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label class="control-label">Status</label>
+            <div>
+                <p class="radio-inline">
+                    <input type="radio" name="statusMedSeg" value="A" ng-model="vm.Form.statusMedSeg"> Aprovado
+                </p>
+                <p class="radio-inline">
+                    <input type="radio" name="statusMedSeg" value="R" ng-model="vm.Form.statusMedSeg"> Reprovado
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="control-label">Observações</label>
+            <textarea name="observacoesBP" class="form-control" ng-model="vm.Form.observacoesBP"
+                ng-value="vm.Form.observacoesMedSeg"></textarea>
+        </div>
+    </div>
+</div>

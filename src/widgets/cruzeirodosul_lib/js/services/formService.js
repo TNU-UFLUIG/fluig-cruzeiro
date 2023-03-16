@@ -7,7 +7,7 @@ angular.module('cruzeirodosul.services')
        * @param {any} scope
        * @param {any} fields
        */
-      atualizaFormulario: function atualizaFormulario(scope, vm) {
+      atualizaForm: function atualizaForm(scope, vm) {
         const loading = FLUIGC.loading('body');
 
         angular.element('form')
@@ -18,7 +18,7 @@ angular.module('cruzeirodosul.services')
         const defer = $q.defer();
 
         scope.$watch('$viewContentLoaded', () => {
-          vm.Formulario = {};
+          vm.Form = {};
           vm.Errors = [];
 
           this.updateChildren(scope, vm);
@@ -47,7 +47,7 @@ angular.module('cruzeirodosul.services')
                 const element = angular.element(`[name='${name}']`);
 
                 if (element.val() !== '') {
-                  vm.Formulario[name] =
+                  vm.Form[name] =
 
                     globalService.isJson(element.val()) ?
                       angular.fromJson(element.val()) :
@@ -84,7 +84,7 @@ angular.module('cruzeirodosul.services')
 
             const tablename = table.attr('tablename');
 
-            vm.Formulario[tablename] = [];
+            vm.Form[tablename] = [];
 
             angular.forEach(table.find('tbody tr'), child => {
               const childElement = angular.element(child);
@@ -116,7 +116,7 @@ angular.module('cruzeirodosul.services')
                     }
                   });
 
-                vm.Formulario[tablename].push(obj);
+                vm.Form[tablename].push(obj);
                 childElement.remove();
 
               }

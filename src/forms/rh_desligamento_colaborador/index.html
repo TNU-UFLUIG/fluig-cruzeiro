@@ -1,0 +1,116 @@
+<html ng-app="cruzeirodosulApp">
+
+<head>
+	<!-- partial:../partials/head.html -->
+	<!-- partial -->
+	<title>Requisição de Desligamento</title>
+</head>
+
+<body ng-controller="cruzeirodosulController as vm">
+	<div class="fluig-style-guide ng-cloak">
+		<div class="container">
+			<div fluig-header class="hidden-xs" logo="../../wcm/widget/cruzeirodosul_lib/images/logo-cruzeiro-do-sul.svg"
+				height="50"></div>
+			<form name="form" role="form" class="form">
+				<!-- partial:partials/angularMap.html -->
+				<!-- partial -->
+
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<!-- partial:partials/header.html -->
+						<!-- partial -->
+					</div>
+
+				</div>
+
+				
+				<div class="panel-group" id="accordion">
+
+					<div class="panel panel-default" id="panelCartaDesligamento">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a class="collapse-icon up" data-toggle="collapse" href="#collapseCartaDesligamento">
+									Solicitação de Desligamento
+								</a>
+							</h4>
+						</div>
+						<div id="collapseCartaDesligamento" class="panel-collapse collapse in">
+							<div class="panel-body">
+								<!-- partial:partials/cartaDesligamento.html -->
+								<!-- partial -->
+							</div>
+						</div>
+					</div>
+					
+					<div class="panel panel-primary" id="panelValidacaoRH">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a class="collapse-icon up" data-toggle="collapse" href="#collapseValidacaoRH">
+									Validar e Ajustar Dados
+								</a>
+							</h4>
+						</div>
+						<div id="collapseValidacaoRH" class="panel-collapse collapse in">
+							<div class="panel-body">
+								<!-- partial:partials/validacaoRH.html -->
+								<!-- partial -->
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default" id="panelExameDemissional">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a class="collapse-icon up" data-toggle="collapse" href="#collapseExameDemissional">
+									Exame Demissional
+								</a>
+							</h4>
+						</div>
+						<div id="collapseExameDemissional" class="panel-collapse collapse in">
+							<div class="panel-body">
+								<!-- partial:partials/exameDemissional.html -->
+								<!-- partial -->
+							</div>
+						</div>
+					</div>
+					
+
+					<div class="panel panel-default" id="panelCalculoRescisao">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a class="collapse-icon up" data-toggle="collapse" href="#collapseCalculoRescisao">
+									Cálculo da Rescisão
+								</a>
+							</h4>
+						</div>
+						<div id="collapseCalculoRescisao" class="panel-collapse collapse in">
+							<div class="panel-body">
+								<!-- partial:partials/calculoRescisao.html -->
+								<!-- partial -->
+							</div>
+						</div>
+					</div>
+
+					<div class="panel panel-danger" id="panelCorrigirErros">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a class="collapse-icon up" data-toggle="collapse" href="#collapseCorrigirErros">
+									Corrigir Erros de Integração
+								</a>
+							</h4>
+						</div>
+						<div id="collapseCorrigirErros" class="panel-collapse collapse in">
+							<div class="panel-body">
+								<!-- partial:partials/corrigirErros.html -->
+								<!-- partial -->
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

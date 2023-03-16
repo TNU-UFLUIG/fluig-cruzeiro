@@ -1,0 +1,78 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="alert alert-info" role="alert">
+            Os dados da requisição foram carregados conforme informados na solicitação aberta pelo Gestor e podem ser alterados conforme necessidade 
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <label class="control-label">Considerar ex-funcionários (demitidos na competência atual ou
+            posterior)</label>
+        <input type="checkbox" ng-readonly="true" fluig-switch ng-model="vm.Form.exFuncionarios" data-on-text="SIM" data-off-text="NÃO"
+            data-on-color="success">
+    </div>
+</div>
+<div class="row">
+
+    <div class="col-sm-2">
+        <label class="control-label">Funcionário</label>
+        <input type="text" ng-readonly="true" class="form-control input-lg" fluig-autocomplete ng-model="vm.Form.funcionario"
+            display-key="matricula" dataset="vm.Funcionarios">
+    </div>
+
+    <div class="col-sm-6">
+        <label class="control-label"><br></label>
+        <input type="text" ng-readonly="true" class="form-control input-lg" fluig-autocomplete ng-model="vm.Form.funcionario"
+            display-key="nome" dataset="vm.Funcionarios">
+    </div>
+    <div class="col-sm-2">
+        <label class="control-label">Data do Desligamento</label>
+        <input type="text" class="form-control input-lg" fluig-date-mask ng-model="vm.Form.dataDesligto">
+    </div>
+    <div class="col-sm-2">
+        <label class="control-label">Dias de Aviso</label>
+        <input type="text" class="form-control input-lg" fluig-number-mask="0" ng-model="vm.Form.diasAviso">
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-2">
+        <label class="control-label">Tipo da Demissão</label>
+        <input type="text" class="form-control input-lg" fluig-autocomplete ng-model="vm.Form.tipoDemissao"
+            display-key="codigo" dataset="vm.TiposDemissao">
+    </div>
+
+    <div class="col-sm-4">
+        <label class="control-label"><br></label>
+        <input type="text" class="form-control input-lg" fluig-autocomplete ng-model="vm.Form.tipoDemissao"
+            display-key="descricao" dataset="vm.TiposDemissao">
+    </div>
+    <div class="col-sm-2">
+        <label class="control-label">Motivo da Demissão</label>
+        <input type="text" class="form-control input-lg" fluig-autocomplete ng-model="vm.Form.motivoDemissao"
+            display-key="codigo" dataset="vm.MotivosDemissao">
+    </div>
+
+    <div class="col-sm-4">
+        <label class="control-label"><br></label>
+        <input type="text" class="form-control input-lg" fluig-autocomplete ng-model="vm.Form.motivoDemissao"
+            display-key="descricao" dataset="vm.MotivosDemissao">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <label class="control-label">Justificativa</label>
+        <textarea name="justificativa" id="justificativa" cols="30" rows="2" ng-model="vm.Form.justificativa"
+            class="form-control"></textarea>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <label class="control-label">Gerar Substituição</label>
+        <input type="checkbox" fluig-switch ng-model="vm.Form.gerarSubstituicao" data-on-text="SIM" data-off-text="NÃO"
+            data-on-color="success">
+    </div>
+</div>
