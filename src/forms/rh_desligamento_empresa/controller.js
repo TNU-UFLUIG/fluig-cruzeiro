@@ -4,25 +4,12 @@ angular.module('cruzeirodosulApp', ['angular.fluig', 'ngAnimate', 'cruzeirodosul
     function cruzeirodosulController($scope, $compile, $http, $timeout, $log, formService) {
       const vm = this;
 
-      if (window.location.hostname == 'localhost') {
-        angular.forEach(angular.element('[tablename]'),
-          (value) => {
-            const table = angular.element(value);
-            angular.forEach(table.find('tbody'), tbody => {
-              angular.element(tbody)
-                .attr('ng-non-bindable', null);
-              $compile(table)($scope);
-            })
-          });
-      }
-
       formService.atualizaForm($scope, vm)
         .then(() => {
           vm.inicia();
         });
 
       vm.inicia = function inicia() {
-        vm.checkLocal();
         vm.checkRegras();
       };
 
@@ -68,30 +55,5 @@ angular.module('cruzeirodosulApp', ['angular.fluig', 'ngAnimate', 'cruzeirodosul
         });
       };
 
-      vm.checkLocal = function checkLocal() {
-        if (window.location.hostname === 'localhost') {
-          vm.Params = {
-            edit: true,
-            etapa: 'inicio',
-            user: 'admin',
-            formMode: 'ADD'
-          };
-
-          // vm.Form = {
-          //   processInstanceId: 23198,
-          //   solicitante: 'ALEX FERREIRA',
-          //   superior: 'PAULA NASCIMENTO',
-          //   bp: 'JOSE ARANTES',
-          //   funcionario: 'ADRIANA ASSUNCAO',
-          //   rh: 'JOANA SILVA',
-          //   medSeg: 'FABIOLA DA SILVA',
-          //   data: new Date(),
-          //   dataBP: new Date(),
-          //   dataRH: new Date(),
-          //   dataMedSeg: new Date(),
-          //   status: 'PENDENTE'
-          // };
-        }
-      };
     }
   ]);

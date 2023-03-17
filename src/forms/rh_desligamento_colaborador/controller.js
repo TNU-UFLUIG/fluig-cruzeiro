@@ -4,18 +4,6 @@ angular.module('cruzeirodosulApp', ['angular.fluig', 'ngAnimate', 'cruzeirodosul
     function cruzeirodosulController($scope, $compile, $http, $timeout, $log, formService) {
       const vm = this;
 
-      if (window.location.hostname == 'localhost') {
-        angular.forEach(angular.element('[tablename]'),
-          (value) => {
-            const table = angular.element(value);
-            angular.forEach(table.find('tbody'), tbody => {
-              angular.element(tbody)
-                .attr('ng-non-bindable', null);
-              $compile(table)($scope);
-            })
-          });
-      }
-
       formService.atualizaForm($scope, vm)
         .then(() => {
           vm.inicia();
